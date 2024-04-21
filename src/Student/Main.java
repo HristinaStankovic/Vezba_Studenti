@@ -1,3 +1,5 @@
+package Student;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -14,7 +16,7 @@ public class Main {
 
         int brojUnetihStudenata = 0;
 
-        while (brojUnetihStudenata <= 4) {
+        while (brojUnetihStudenata < 5) {
 
             System.out.println("Unesite ime studenta ili 'quit' za zavrsetak:");
             String ime = scanner.nextLine();
@@ -33,7 +35,7 @@ public class Main {
             Student student = new Student(ime, prezime, ocena);
             sviStudenti.add(student);
 
-            if (ocena > 5 || ocena<10) {
+            if (ocena > 5 && ocena < 10) {
                 studentiKojiSuPolozili.add(student);
             }
         }
